@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTApi", "RESTApi\RESTApi.csproj", "{B4E648C9-0824-472E-A23F-23B3092FA18C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4E648C9-0824-472E-A23F-23B3092FA18C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E648C9-0824-472E-A23F-23B3092FA18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E648C9-0824-472E-A23F-23B3092FA18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E648C9-0824-472E-A23F-23B3092FA18C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F221E3A8-6E67-4FE7-997F-3308CF64AAFD}
+	EndGlobalSection
+EndGlobal
