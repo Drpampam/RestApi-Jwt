@@ -11,7 +11,7 @@ namespace RESTApi.Controllers
     public class UserController : ControllerBase
     {
         [HttpGet("Admins")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Policy = "RequireAdminOnly")]
         public IActionResult AdminEndPoint()
         {
             var currentUser = GetUser();
@@ -19,12 +19,14 @@ namespace RESTApi.Controllers
         }
 
         [HttpGet("Clients")]
-        [Authorize(Roles = "Client")]
+        [Authorize(Policy = "RequireCustomerOnly")]
         public IActionResult OtherUsersEndPoint()
         {
             var currentUser = GetUser();
             return Ok($"Welcome {currentUser.FirstName}, You are an {currentUser.Role}");
         }
+
+
         private User GetUser()
         {
             //we try to get the identity from httpcontext identity
@@ -37,7 +39,7 @@ namespace RESTApi.Controllers
                 {
                     UserName = userClaims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value,
                     Email = userClaims.FirstOrDefault(x => x.Type == ClaimTypes.Email) ?.Value,
-                    FirstName = userClaims.FirstOrDefault(x => x.Type == ClaimTypes.GivenName) ?.Value,
+                    FirstName = userClaims.FirstOrDefault(x => x.Type == ClaimTypes.GivenName)?.Value,
                     LastName = userClaims.FirstOrDefault(x => x.Type == ClaimTypes.Surname) ?.Value,
                     Role = userClaims.FirstOrDefault(x => x.Type == ClaimTypes.Role) ?.Value
                 };

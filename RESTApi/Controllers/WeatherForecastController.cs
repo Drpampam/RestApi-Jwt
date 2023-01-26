@@ -1,9 +1,13 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RESTApi.Models;
 
 namespace RESTApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize(Policy = "RequireAdminOnly")]
+
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

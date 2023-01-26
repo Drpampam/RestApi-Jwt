@@ -2,6 +2,7 @@
 
 namespace RESTApi.MockData
 {
+    //Mockdata created to prevent external usings/Data Source
     public class MockData
     {
         public static List<User> Users { get; set; } = new List<User>() 
