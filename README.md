@@ -2,7 +2,7 @@
 A simple web API with Authentication and Authorization... Created for testing,
 This project was created solely for testing. Most of the methods here can be written in seperate classes.
 
-No External data source was used, just static list containing two users(admin/client)
+No External data source was used, just static list found in Mockdata class containing two users(admin/client)
 
 Please check the Mockdata class for login details to test end-point
 
