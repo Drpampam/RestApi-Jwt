@@ -6,7 +6,7 @@ namespace RESTApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize(Policy = "RequireAdminOnly")]
+    [Authorize]
 
     public class WeatherForecastController : ControllerBase
     {
